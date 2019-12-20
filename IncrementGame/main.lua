@@ -11,6 +11,7 @@ last = false
         }
 end
 
+intro = ("Welcome to Sam's Pizzeria")
 cheese = 0
 pepperoni = 0
 meat = 0
@@ -50,10 +51,10 @@ love.timer.sleep(1)
 end))
 
 table.insert(buttons, newButton(
-"Pineapple Pizza ",
+"Pineapple Pizza",
 function()
 print("Making...")
-pineapple = pineapple + 1
+ pineapple = pineapple + 1
 love.timer.sleep(1)
 end))
 
@@ -64,9 +65,10 @@ function love.update()
 end
 
 function love.draw()
+love.graphics.rectangle('fill',150, 500, 480, 72)
 font = love.graphics.newFont(30)
   love.graphics.setFont(font)
-love.graphics.print("Welcome to Sam's Pizzeria!")
+love.graphics.print(intro)
 love.graphics.setColor(.22, 1, .7)
   font = love.graphics.newFont(20)
 love.graphics.setFont(font)
